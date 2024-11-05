@@ -7,7 +7,7 @@ public class ConsoleNotebookView implements NotebookView {
     @Override
     public void showNotes(List<Note> notes) {
         if (notes.isEmpty()) {
-            System.out.println("No notes found.");
+            System.out.println("Заметки не найдены.");
         } else {
             for (Note note : notes) {
                 System.out.println(note);
@@ -20,19 +20,19 @@ public class ConsoleNotebookView implements NotebookView {
     }
     @Override
     public LocalDateTime getDateTimeInput() {
-        System.out.println("Enter date and time (yyyy-MM-dd'T'HH:mm):");
+        System.out.println("Введите дату и время (гггг-ММ-дд'T'ЧЧ:мм):");
         String input = scanner.nextLine();
         DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
         return LocalDateTime.parse(input, formatter);
     }
     @Override
     public String getDescriptionInput() {
-        System.out.println("Enter note description:");
+        System.out.println("Введите описание заметки:");
         return scanner.nextLine();
     }
     @Override
     public String getFileNameInput() {
-        System.out.println("Enter file name:");
+        System.out.println("Введите имя файла:");
         return scanner.nextLine();
     }
 }
