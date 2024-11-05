@@ -8,12 +8,12 @@ public class Main {
         NotebookPresenter presenter = new NotebookPresenter(model, view);
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.println("1. Add Note");
-            System.out.println("2. Show Notes for Day");
-            System.out.println("3. Show Notes for Week");
-            System.out.println("4. Save Notes");
-            System.out.println("5. Load Notes");
-            System.out.println("6. Exit");
+            System.out.println("1. Добавить заметку");
+            System.out.println("2. Показать заметки за день");
+            System.out.println("3. Показать заметки за неделю");
+            System.out.println("4. Сохранить заметки");
+            System.out.println("5. Загрузить заметки");
+            System.out.println("6. Выход");
             int choice = scanner.nextInt();
             scanner.nextLine(); 
             switch (choice) {
@@ -35,7 +35,7 @@ public class Main {
                 case 6:
                     return;
                 default:
-                    System.out.println("Invalid choice");
+                    System.out.println("Неправильный выбор");
             }
         }
     }
