@@ -30,8 +30,7 @@ public class NotebookPresenter {
             model.saveToFile(fileName);
             view.showMessage("Notes saved to " + fileName);
         } catch (IOException e) {
-            view.showMessage("Failed to save notes: " +
-                    e.getMessage());
+            view.showMessage("Failed to save notes: " + e.getMessage());
         }
     }
     public void loadNotes() {
@@ -40,8 +39,7 @@ public class NotebookPresenter {
             model.loadFromFile(fileName);
             view.showMessage("Notes loaded from " + fileName);
         } catch (IOException e) {
-            view.showMessage("Failed to load notes: " +
-                    e.getMessage());
+            view.showMessage("Failed to load notes: " + e.getMessage());
         }
     }
 }
