@@ -20,11 +20,9 @@ public class ConsoleNotebookView implements NotebookView {
     }
     @Override
     public LocalDateTime getDateTimeInput() {
-        System.out.println("Enter date and time
-        (yyyy-MM-dd'T'HH:mm):");
+        System.out.println("Enter date and time (yyyy-MM-dd'T'HH:mm):");
         String input = scanner.nextLine();
-        DateTimeFormatter formatter =
-                DateTimeFormatter.ISO_LOCAL_DATE_TIME;
+        DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
         return LocalDateTime.parse(input, formatter);
     }
     @Override
